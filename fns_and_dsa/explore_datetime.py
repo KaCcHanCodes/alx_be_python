@@ -14,7 +14,7 @@ def calculate_future_date():
     future_date = day + delta
     result = future_date.strftime()
 
-    print(f"Future date: {future_date}")
+    print(f"Future date: {result}")
 
 display_current_datetime()
 calculate_future_date()
