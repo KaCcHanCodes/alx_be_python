@@ -15,7 +15,7 @@ def main():
         account.deposit(amount)
         print(f"Deposited: ${amount}")
     elif command == "withdraw" and amount is not None:
-        if amount < 100:
+        if amount <= 100:
             account.withdraw(amount)
             print(f"Withdrew: ${amount}")
         else:
