@@ -32,10 +32,13 @@ class Library:
             print(f"{book._title} by {book._author}")
 
     def check_out_book(self, book_title):
+        #Iterate through the shelf (self._books)
         for book in self._books:
-            if book.check_out_book(book_title):
+        #Runs every book in the shelf and cross reference the book_title value with the check_out_book method in the class Book    
+            if book.check_out_book(book_title):  
                 return
     def return_book(self, book_title):
+    #Runs every book in the shelf and cross reference the book_title value with the return_book method in the class Book 
         for book in self._books:
             if book.return_book(book_title):
                 return
