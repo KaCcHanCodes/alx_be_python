@@ -8,15 +8,13 @@ class Book:
         #checks if the book title is same as book_title, if yes the state of _is_checked_out becomes true
         if not self._is_checked_out:
             self._is_checked_out = True
-            return True
-        return False
+        return
 
     def return_book(self):
         #checks if the book title is same as book_title, if yes the state of _is_checked_out becomes false
         if self._is_checked_out:
             self._is_checked_out = False
-            return True
-        return False
+        return
 
 class Library:
     def __init__(self):
@@ -33,13 +31,15 @@ class Library:
                 for book in available_books: #Iterate through the new list of books in the library
                     print(f"{book.title} by {book.author}")
 
+
     def check_out_book(self, book_title):
         #Iterate through the shelf (self._books)
         for book in self._books:
         #Runs every book in the shelf and cross reference the book_title with book titles in the #Book shelf and checks out using the check_out method in the class Book    
-            if book.title == book_title and not book._is_checked_out:
-                book.check_out()  
+            if (book.title == book_title) and (not book._is_checked_out):
+                book.check_out()
                 return
+
     def return_book(self, book_title):
     #Runs every book in the shelf and cross reference the book_title value with book titles in the #Book shelf and returns them using the return_book method in the class Book 
         for book in self._books:
